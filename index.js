@@ -129,7 +129,7 @@ app.get('/callback', async (req, res) => {
 
     res.send(success ? 'âœ… Joined successfully!' : 'âš ï¸ Bound, but failed to join the server.');
   } catch (e) {
-    console.error('[OAuth2] Error:', e.response?.data || e.message);
+    console.error('[OAuth2] Error:', (e.response && e.response.data) || e.message);
     res.send('âŒ Failed to authorize. Try again.');
   }
 });
@@ -165,7 +165,7 @@ async function joinUser(user, guildId) {
             }
           );
         } catch (e) {
-          console.warn(`[ROLE FAIL] ${user.username}:`, e.response?.data?.message || e.message);
+          console.warn(`[ROLE FAIL] ${user.username}:`, (e.response && e.response.data && e.response.data.message) || e.message);
         }
       }
 
@@ -179,7 +179,7 @@ async function joinUser(user, guildId) {
       return true;
     }
   } catch (err) {
-    console.log(`[FAIL] ${user.username}:`, err.response?.data?.message || err.message);
+    console.log(`[FAIL] ${user.username}:`, (err.response && err.response.data && err.response.data.message) || err.message);
   }
 
   return false;
