@@ -1,4 +1,4 @@
-`{
+{
   "name": "discord-oauth2-joiner",
   "version": "1.0.0",
   "description": "Discord OAuth2 auto-join bot with user binding and Express server.",
