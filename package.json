@@ -1,0 +1,28 @@
+`{
+  "name": "discord-oauth2-joiner",
+  "version": "1.0.0",
+  "description": "Discord OAuth2 auto-join bot with user binding and Express server.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "oauth2",
+    "auto-join",
+    "express"
+  ],
+  "author": "YourName",
+  "license": "MIT"
+}
